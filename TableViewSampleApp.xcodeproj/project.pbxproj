@@ -20,6 +20,7 @@
 		AB10FB132596E9F1004878B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB10FAF42596E9F0004878B9 /* Foundation.framework */; };
 		AB10FB1B2596E9F1004878B9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB10FB192596E9F1004878B9 /* InfoPlist.strings */; };
 		AB10FB1E2596E9F1004878B9 /* TableViewSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB10FB1D2596E9F1004878B9 /* TableViewSampleAppTests.m */; };
+		AB10FB2C2596F287004878B9 /* DestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB10FB2B2596F287004878B9 /* DestinationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,21 +38,23 @@
 		AB10FAF22596E9F0004878B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AB10FAF42596E9F0004878B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB10FAF62596E9F0004878B9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AB10FAFA2596E9F0004878B9 /* TableViewSampleApp-Info.plist */ = {isa = PBXFileReference; path = "TableViewSampleApp-Info.plist"; sourceTree = "<group>"; };
+		AB10FAFA2596E9F0004878B9 /* TableViewSampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewSampleApp-Info.plist"; sourceTree = "<group>"; };
 		AB10FAFC2596E9F0004878B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB10FAFE2596E9F0004878B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AB10FB002596E9F0004878B9 /* TableViewSampleApp-Prefix.pch */ = {isa = PBXFileReference; path = "TableViewSampleApp-Prefix.pch"; sourceTree = "<group>"; };
-		AB10FB012596E9F0004878B9 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		AB10FB002596E9F0004878B9 /* TableViewSampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableViewSampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		AB10FB012596E9F0004878B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AB10FB022596E9F0004878B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AB10FB052596E9F0004878B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		AB10FB072596E9F0004878B9 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		AB10FB072596E9F0004878B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AB10FB082596E9F0004878B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AB10FB0F2596E9F1004878B9 /* TableViewSampleAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewSampleAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB10FB102596E9F1004878B9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		AB10FB182596E9F1004878B9 /* TableViewSampleAppTests-Info.plist */ = {isa = PBXFileReference; path = "TableViewSampleAppTests-Info.plist"; sourceTree = "<group>"; };
+		AB10FB182596E9F1004878B9 /* TableViewSampleAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViewSampleAppTests-Info.plist"; sourceTree = "<group>"; };
 		AB10FB1A2596E9F1004878B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AB10FB1C2596E9F1004878B9 /* TableViewSampleAppTests.h */ = {isa = PBXFileReference; path = TableViewSampleAppTests.h; sourceTree = "<group>"; };
+		AB10FB1C2596E9F1004878B9 /* TableViewSampleAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewSampleAppTests.h; sourceTree = "<group>"; };
 		AB10FB1D2596E9F1004878B9 /* TableViewSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewSampleAppTests.m; sourceTree = "<group>"; };
+		AB10FB2A2596F287004878B9 /* DestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationViewController.h; sourceTree = "<group>"; };
+		AB10FB2B2596F287004878B9 /* DestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +116,11 @@
 			children = (
 				AB10FB012596E9F0004878B9 /* AppDelegate.h */,
 				AB10FB022596E9F0004878B9 /* AppDelegate.m */,
-				AB10FB042596E9F0004878B9 /* MainStoryboard.storyboard */,
 				AB10FB072596E9F0004878B9 /* ViewController.h */,
 				AB10FB082596E9F0004878B9 /* ViewController.m */,
+				AB10FB2A2596F287004878B9 /* DestinationViewController.h */,
+				AB10FB2B2596F287004878B9 /* DestinationViewController.m */,
+				AB10FB2D2596F2DF004878B9 /* Storyboards */,
 				AB10FAF92596E9F0004878B9 /* Supporting Files */,
 			);
 			path = TableViewSampleApp;
@@ -149,6 +154,14 @@
 				AB10FB192596E9F1004878B9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB10FB2D2596F2DF004878B9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AB10FB042596E9F0004878B9 /* MainStoryboard.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +273,7 @@
 				AB10FAFF2596E9F0004878B9 /* main.m in Sources */,
 				AB10FB032596E9F0004878B9 /* AppDelegate.m in Sources */,
 				AB10FB092596E9F0004878B9 /* ViewController.m in Sources */,
+				AB10FB2C2596F287004878B9 /* DestinationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

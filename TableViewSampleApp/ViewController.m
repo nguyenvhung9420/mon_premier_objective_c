@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "DestinationViewController.h"
 
-@implementation ViewController
+@implementation ViewController {
+    NSArray *recipes;
+}
+@synthesize tableView;
 
 - (void)didReceiveMemoryWarning
 {
@@ -21,35 +25,77 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Initialize table data
+    recipes = [NSArray arrayWithObjects:@"Eggs", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
+    tableView.dataSource = self;
+    tableView.delegate = self;
+    
+    self.navigationItem.title = @"Ingredients";
 }
 
-- (void)viewDidUnload
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    return [recipes count];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-    [super viewWillAppear:animated];
+    //Change the selected background view of the cell.
+    
+//    UIViewController *destinationVC = [[DestinationViewController alloc] init];
+    
+    NSString * storyboardName = @"MainStoryboard"; 
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"DestinationViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    
 }
 
-- (void)viewDidAppear:(BOOL)animated
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super viewDidAppear:animated];
+    static NSString *simpleTableIdentifier = @"SimpleTableCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [recipes objectAtIndex:indexPath.row];
+    return cell;
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
 
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
+
+//- (void)viewDidUnload
+//{
+//    [super viewDidUnload];
+//    // Release any retained subviews of the main view.
+//    // e.g. self.myOutlet = nil;
+//}
+//
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//}
+//
+//- (void)viewDidAppear:(BOOL)animated
+//{
+//    [super viewDidAppear:animated];
+//}
+//
+//- (void)viewWillDisappear:(BOOL)animated
+//{
+//	[super viewWillDisappear:animated];
+//}
+//
+//- (void)viewDidDisappear:(BOOL)animated
+//{
+//	[super viewDidDisappear:animated];
+//}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -57,4 +103,8 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (void)viewDidUnload {
+    [self setTableView:nil];
+    [super viewDidUnload];
+}
 @end
